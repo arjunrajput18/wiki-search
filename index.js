@@ -5,7 +5,7 @@ let outputBox = document.querySelector("#output-box");
 
 let wikipediaUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20`;
 
-const cratedUrl = (searchVal) => {
+const constructedURl = (searchVal) => {
   return `${wikipediaUrl}&srsearch=${searchVal}`;
 }
 
@@ -14,7 +14,7 @@ const cratedUrl = (searchVal) => {
 const showResult = (searchValue) => {
   // console.log(searchValue);
 
-  fetch(cratedUrl(searchValue))
+  fetch(constructedURL(searchValue))
     .then((response) => response.json())
     .then((data) => {
       let resultArr = data.query.search;
@@ -46,18 +46,14 @@ const displayResult = (resultArr) => {
       <a href=${itemUrl} id="url" target="_blank" >Read more</a>
       </div>`
     );
-    // console.log(itemTitle);
-    // console.log(itemDescription);
-    // console.log(itemUrl);
+   
 
   })
 }
 
 formElem.addEventListener("submit", function (event) {
   event.preventDefault();
-  // console.log("Working");
+  
   showResult(inputText.value);
 })
 
-
-// encodeURI see this -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
