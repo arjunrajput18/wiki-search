@@ -1,2 +1,2 @@
-# wiki-search
+# wikipedia-search
  wikipedia search app

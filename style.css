@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  :root {
+    --primary: #a21caf;
+  }
+  
+  nav {
+    background-color: var(--primary);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  h1 {
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  h2 {
+    text-align: center;
+    color: var(--primary);
+  }
+  
+  .main-div {
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid: 1fr;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #inputText {
+    padding: 8px 25px;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    outline-color: var(--primary);
+  }
+  
+  #search-btn {
+    border: 1px solid #fff;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 55px;
+  }
+  
+  #search-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+  
+  .output-div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 35px;
+  }
+  
+  #title,
+  #description,
+  #url {
+    margin: 5px;
+    letter-spacing: 1px;
+  }
+  
+  #title {
+    color: var(--primary);
+  }
+  #description {
+    line-height: 22px;
+  }
+  
+  #url {
+    text-decoration: none;
+    color: #4f46e5;
+    padding: 6px;
+    border-bottom: 1px solid #4f46e5;
+  }
+  
+  #url:hover {
+    font-weight: bold;
+  }
+  
+  /* For mobiles */
+  
+  @media only screen and (max-width: 600px) {
+    .main-div {
+      overflow: hidden;
+      width: 260px;
+      margin-top: 50px;
+      display: grid;
+      grid: 1fr;
+    }
+    nav {
+      background-color: var(--primary);
+      padding: 15px 0px;
+    }
+    #form {
+      flex-wrap: wrap;
+    }
+  }
+  input {
+    
+    padding: 0.5rem;
+    margin: 0rem 0.7rem;
+    border-radius: 0.5rem;
+  }
